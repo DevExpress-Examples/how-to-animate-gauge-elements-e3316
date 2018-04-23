@@ -1,0 +1,29 @@
+﻿<Window x:Class="DXGauges_Animation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
+        Title="MainWindow" Height="350" Width="525" >
+    <Grid>
+        <!--region #EnableAnimation-->
+        <dxga:CircularGaugeControl EnableAnimation="True">
+        <!--endregion #EnableAnimation-->
+            <dxga:CircularGaugeControl.Scales>
+                <dxga:ArcScale>
+                    <dxga:ArcScale.Needles>
+                        <!--region #EnableEditing-->
+                        <dxga:ArcScaleNeedle IsInteractive="True">
+                        <!--endregion #EnableEditing-->
+                            <dxga:ArcScaleNeedle.Animation>
+                                <dxga:IndicatorAnimation Duration="00:00:02.0000000">
+                                    <dxga:IndicatorAnimation.EasingFunction>
+                                        <BounceEase/>
+                                    </dxga:IndicatorAnimation.EasingFunction>
+                                </dxga:IndicatorAnimation>
+                            </dxga:ArcScaleNeedle.Animation>
+                        </dxga:ArcScaleNeedle>
+                    </dxga:ArcScale.Needles>
+                </dxga:ArcScale>
+            </dxga:CircularGaugeControl.Scales>
+        </dxga:CircularGaugeControl>
+    </Grid>
+</Window>
